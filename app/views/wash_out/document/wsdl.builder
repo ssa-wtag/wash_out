@@ -20,7 +20,7 @@ xml.definitions 'xmlns' => 'http://schemas.xmlsoap.org/wsdl/',
   end
 
   @map.each do |operation, formats|
-    xml.message :name => "" do
+    xml.message :name => "#{operation}" do
       formats[:in].each do |p|
         xml.part wsdl_occurence(p, false, :name => p.name, :type => p.namespaced_type)
       end
