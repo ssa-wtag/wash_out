@@ -26,6 +26,7 @@ module WashOutHelper
   end
 
   def wsdl_data(xml, params)
+    params.each { |this| xml.delete(this) if params[this].blank? }
     params.each do |param|
       next if param.attribute?
 
