@@ -91,8 +91,8 @@ module WashOutHelper
         end
 
         defined << param.basic_type
-      elsif !param.classified?
-        raise RuntimeError, "Duplicate use of `#{param.basic_type}` type name. Consider using classified types."
+      # elsif !param.classified?
+      #   raise RuntimeError, "Duplicate use of `#{param.basic_type}` type name. Consider using classified types."
       end
     end
 
